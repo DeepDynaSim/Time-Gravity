@@ -8,7 +8,7 @@ f0 = 4e14; % original frequency in Hz (visible light)
 % Acceleration due to gravity
 g = G * M / R^2;
 
-% Distance photon travels away from the surface, up to 20 million km
+% Distance photon travels away from the surface, up to 20,000 km
 s = linspace(0, 2e7, 200); % Distance array from 0 to 20,000 km
 
 % Calculating frequency shift for color representation
@@ -20,11 +20,11 @@ figure(1);
 set(gcf, 'Position', [100, 100, 800, 600]); % Adjust figure size for better visibility
 axis square;
 grid on;
-xlim([-1, max(s)/1e6]); % X limits in million km
+xlim([-1, max(s)/1e6]); % X coordinate in thousands of kilometres
 ylim([-1, 1]); % Y limits for simplicity
-xlabel('Distance from surface (million km)');
+xlabel('Distance from surface (10^3 km)');
 ylabel('Y (arbitrary units)');
-title('Visualization of Gravitational Redshift with Moving Mass');
+title('Illustrative Photon Gravitational Redshift');
 
 % Plot the massive body
 viscircles([0, 0], R/1e7, 'Color', 'b', 'LineWidth', 1.5); % Scaled down for visibility
@@ -36,7 +36,7 @@ frames(length(s)) = struct('cdata',[],'colormap',[]);
 % Animation loop for moving mass and color shift
 for i = 1:length(s)
     % Photon's position
-    x = s(i) / 1e6; % Convert to million km for x-axis
+    x = s(i) / 1e6; % Convert metres to thousands of kilometres for x-axis
     
     % Interpolating color from violet to red based on frequency shift
     color = [1-fs_normalized(i)/2, 0, fs_normalized(i) + (1-fs_normalized(i))/2]; % Interpolation from violet to red
@@ -57,9 +57,9 @@ for i = 1:length(s)
         grid on;
         xlim([-1, max(s)/1e6]); % X limits
         ylim([-1, 1]); % Y limits
-        xlabel('Distance from surface (million km)');
+        xlabel('Distance from surface (10^3 km)');
         ylabel('Y (arbitrary units)');
-        title('Visualization of Gravitational Redshift with Moving Mass');
+        title('Illustrative Photon Gravitational Redshift');
     end
 end
 
