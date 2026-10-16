@@ -1,7 +1,32 @@
-# Time-Gravity
-Objective: Explore the intricate relationship between time and gravity, a key area at the crossroads of General Relativity and Quantum Mechanics.
+# Time, Gravity and Relativistic Energy
 
-tachyon_formulation.m
+**DeepDynaSim collection | Computational physics | Educational MATLAB visualizations**
+
+Explore gravitational redshift, photon-frequency visualization and relativistic energy-momentum relations using a compact set of MATLAB examples.
+
+## Choose a resource
+
+| Resource | Focus |
+| --- | --- |
+| [frequencyshift_graph.m](frequencyshift_graph.m) | Frequency-shift plots |
+| [frequencyshift_animation.m](frequencyshift_animation.m) | Photon-frequency animation |
+| [tachyon_formulation.m](tachyon_formulation.m) | Normal-particle and hypothetical tachyon energy-momentum comparison |
+| [Lecture notes](Understanding%20Time%2C%20Gravity%2C%20and%20Energy.pdf) | Conceptual background |
+| [Example video](GravitationalRedshift2DVisualization_VioletToRed.mp4) | Existing redshift visualization |
+
+## Getting started
+
+Open the cloned repository root in MATLAB. Inspect physical constants, units, velocity/distance ranges and video-output settings before running a script. The symbolic energy-momentum example requires Symbolic Math Toolbox.
+
+```matlab
+edit frequencyshift_graph.m
+```
+
+These examples support teaching and numerical exploration. Tachyons are hypothetical in the comparison script. Review the model assumptions and approximations in the notes when interpreting the redshift visualizations.
+
+## Detailed notes
+
+### `tachyon_formulation.m`
 
 This MATLAB code snippet is designed to explore and visualize the concepts of relativistic energy and momentum for both normal particles (those with real mass) and hypothetical particles known as tachyons (those posited to have imaginary mass). It employs MATLAB's symbolic toolbox to define and manipulate equations symbolically before numerical evaluation. Here's a detailed breakdown:
 
@@ -26,7 +51,7 @@ The code thus provides a graphical comparison between the theoretical behaviors 
 
 ![image](https://github.com/DeepDynaSim/Time-Gravity/assets/35817872/4ceb8ebc-d10a-44d0-9d71-b8ee062acf6f)
 
-frequencyshift_animation.m
+### `frequencyshift_animation.m`
 
 This MATLAB code snippet is designed to visualize the concept of gravitational redshift through an animation. Gravitational redshift is a relativistic effect observed when light moves away from a massive body, such as a planet or a star; the light's frequency decreases (shifts towards the red end of the spectrum) as it climbs out of the gravitational well. Here's an in-depth explanation of the code:
 
@@ -50,3 +75,12 @@ This visualization provides an intuitive understanding of how light is affected 
 
 https://github.com/DeepDynaSim/Time-Gravity/assets/35817872/9e97d7df-d17c-435b-8baa-08fdf8743152
 
+
+
+## Related work and collaboration
+
+Explore related repositories: [LorentzTransformations](https://github.com/DeepDynaSim/LorentzTransformations) · [RindlerSpace DopplerEffect](https://github.com/DeepDynaSim/RindlerSpace-DopplerEffect).
+
+[DeepDynaSim](https://github.com/DeepDynaSim) is an engineering R&D and consulting company in İzmir, Türkiye, focused on physics-guided AI, simulation and control. For engineering collaboration: [support@deepdynasim.com](mailto:support@deepdynasim.com). For repository questions, use [Issues](https://github.com/DeepDynaSim/Time-Gravity/issues).
+
+Reuse follows the existing [LICENSE](LICENSE); academic authorship and third-party attribution remain with their respective creators.
